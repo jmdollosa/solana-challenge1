@@ -7,12 +7,22 @@ const {
     LAMPORTS_PER_SOL
 } = require("@solana/web3.js");
 
+var args = process.argv.slice(2);
+
+if ( args.length > 0 ) {
+    const userPubKey = args[0];
+    console.log(`User public key: ${userPubKey}`);
+    
+}
+
+
 // Create a new keypair
 const newPair = new Keypair();
 
 // Exact the public and private key from the keypair
 const publicKey = new PublicKey(newPair._keypair.publicKey).toString();
 const privateKey = newPair._keypair.secretKey;
+
 
 // Connect to the Devnet
 const connection = new Connection(clusterApiUrl("devnet"), "confirmed");
