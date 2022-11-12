@@ -15,14 +15,15 @@ if ( args.length > 0 ) {
     
 }
 
-
 // Create a new keypair
 const newPair = new Keypair();
+
+// You can also generate a new keypair by running Keypair.generate()
+// const testPair = Keypair.generate();
 
 // Exact the public and private key from the keypair
 const publicKey = new PublicKey(newPair._keypair.publicKey).toString();
 const privateKey = newPair._keypair.secretKey;
-
 
 // Connect to the Devnet
 const connection = new Connection(clusterApiUrl("devnet"), "confirmed");
