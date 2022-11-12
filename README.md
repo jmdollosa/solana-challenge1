@@ -1,6 +1,7 @@
 # Solana - Challenge 1
 
-Metacrafters challenge for module1.
+Metacrafters challenge for module1. 
+The script contains the basic scripting for transferring SOL to a wallet through their public key.
 
 ### Instructions
 
